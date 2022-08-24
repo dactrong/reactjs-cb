@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nguyen Dac Trong",
+      "age": "21"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Dac Trong 12123",
+      "age": "21"
+    },
+    {
+      "id": 3,
+      "name": "Nguyen Dac Trong 123123",
+      "age": "21"
+    }
+  ]
+}

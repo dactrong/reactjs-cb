@@ -3,15 +3,27 @@ import { useState } from "react";
 import Car from "./components/Car";
 import Count from "./components/Count";
 import Props from "./components/Props";
+import UseEffect from "./components/UseEffect";
 import Wellcome from "./components/Wellcome";
 
 function App(props) {
-  const products = [
+  // const products = [
+  //   { id: 1, name: "dactrong" },
+  //   { id: 2, name: "trankieu" },
+  //   { id: 3, name: "Thuy vân" },
+  // ];
+  const [count, setCount] = useState(0);
+  const [products  , setProduct] = useState([
     { id: 1, name: "dactrong" },
     { id: 2, name: "trankieu" },
     { id: 3, name: "Thuy vân" },
-  ];
-  const [count, setCount] = useState(0);
+  ])
+  const handleRemove = (id) => {
+       console.log(id);
+       const removeSubmit = products.filter(item => item.id !== id)
+       setProduct(removeSubmit)
+
+  }
   return (
     <div className="App">
       Count: {count}
@@ -23,8 +35,9 @@ function App(props) {
       <Car></Car>
       <Count></Count>
       {products.map((item) => (
-        <Props data={item}></Props>
+        <Props data={item}><button onClick = {() => handleRemove(item.id)}>Xóa</button></Props>
       ))}
+      <UseEffect></UseEffect>
     </div>
   );
 }

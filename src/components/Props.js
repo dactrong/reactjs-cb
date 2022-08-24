@@ -5,8 +5,8 @@ const Props = (props) => {
     return (
         <div>
             <ul>
-                <li>{props.data.id}</li>
                 <li>{props.data.name}</li>
+                   <p>{props.children}</p>  
             </ul>
         </div>
     );

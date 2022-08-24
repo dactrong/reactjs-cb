@@ -4,9 +4,16 @@ class Count extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { index: 0 };
+    this.state = { index: 10 };
   }
+   
+  componentDidMount () {
+     document.title = `Gia tri cua ban là ${this.state.index}`
+  }
+  componentDidUpdate(){
+    document.title = `Gia tri cua ban là ${this.state.index}`
 
+  }
   render() {
     return (
       <div>
