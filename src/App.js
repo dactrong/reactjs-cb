@@ -1,4 +1,5 @@
 import "./App.css";
+import State from "./components/State";
 import Wellcome from "./components/Wellcome";
 
 
@@ -14,11 +15,9 @@ const products= [
     <div className="App">
       <h1>Wellcome to ThuanThanhTech</h1>
       <hr/>
-      
         <Wellcome data={products}> Thông tin sản phẩm</Wellcome>
-      
-     
       <hr/>
+      <State></State>
 
     </div>
   );
