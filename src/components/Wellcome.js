@@ -1,16 +1,22 @@
-import React from "react";
+import React from 'react';
 
 const Wellcome = (props) => {
-  return (
-    <div>
-      <h1> {props.children}</h1>
-      <ul>
-        <li>Tên:{props.name}</li>
-        <li>Tuổi:{props.age}</li>
-        <li>Địa chỉ:{props.adress}</li>
-      </ul>
-    </div>
-  );
+
+    return (
+        <div>
+            <h3>{props.children}</h3>
+            {props.data.map((item) =>(
+                <ul> 
+                <li>{item.name}</li>
+                <li>{item.price}</li>
+                <li>{item.desc}</li>
+                </ul>
+            ))}
+            
+
+           
+        </div>
+    );
 };
 
 export default Wellcome;
