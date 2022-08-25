@@ -1,22 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const Wellcome = (props) => {
-
-    return (
+   
+  return (
+    <div>
+      <h3>{props.children}</h3>
+      {props.data.map((item) => (
         <div>
-            <h3>{props.children}</h3>
-            {props.data.map((item) =>(
-                <ul> 
-                <li>{item.name}</li>
-                <li>{item.price}</li>
-                <li>{item.desc}</li>
-                </ul>
-            ))}
-            
-
-           
+          <ul>
+            <li>{item.name}</li>
+            <li>{item.price}</li>
+            <li>{item.desc}</li>
+          </ul>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Wellcome;
