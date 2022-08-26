@@ -6,10 +6,11 @@ class ValidationProps extends React.Component{
         
         return(
             <div>
-               <h2>{this.props.name}</h2>
-               <h2>{this.props.age}</h2>
-               <h2>{this.props.phone}</h2>
-               <h2>{this.props.address}</h2>
+            <h1>ValidationProps</h1>
+               <p>{this.props.name}</p>
+               <p>{this.props.age}</p>
+               <p>{this.props.phone}</p>
+               <p>{this.props.address}</p>
             </div>
         )
     }
@@ -25,7 +26,7 @@ ValidationProps.defaultProps = {
   ValidationProps.propTypes = {
      name:PropTypes.string,
      age:PropTypes.number,
-     phone:PropTypes.string,
+     phone:PropTypes.number,
      address:PropTypes.oneOf(["BN","HN","TQ"])
   }
 export default ValidationProps
